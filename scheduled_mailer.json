@@ -1,0 +1,36 @@
+{
+  "handlers": {
+    "scheduled_mailer": {
+      "command": "/etc/sensu/handlers/scheduled_mailer.rb",
+      "type": "pipe",
+      "filters": [
+
+      ],
+      "severities": [
+        "ok",
+        "warning",
+        "critical",
+        "unknown"
+      ]
+    }
+  },
+  "scheduled_mailer": {
+    "admin_gui": "http://sensu.yourdomain/",
+    "mail_from": "sensu@sensu.yourdomain",
+    "subscriptions": {
+      "Harry Potter": {
+        "mail_to": "harry.potter@yourdomain",
+        "days_of_week": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "smtp_address": "localhost",
+    "smtp_port": "25",
+    "smtp_domain": "yourdomain"
+  }
+}
